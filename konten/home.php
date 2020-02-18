@@ -1,0 +1,1 @@
+<h1>Hai, <?php print $_SESSION['nama']?></h1>
