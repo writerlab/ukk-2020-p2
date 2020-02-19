@@ -1,24 +1,23 @@
-<?php 
+<?php
 if (isset($_POST['kirim'])) {
-  $nik      = $_POST['nik'];
-  $nama     = $_POST['nama'];
+  $nik = $_POST['nik'];
+  $nama = $_POST['nama'];
   $username = $_POST['username'];
   $password = $_POST['password'];
   $telp = $_POST['telp'];
 
-  $q = mysqli_query($konek, "insert into netijen values (
-                            NULL, '$nik', '$nama', '$username',
-                            md5('$password'), '$telp'
-                            ) ");
-  
-  if ($q) {
-    $pesan = "<div class='alert alert-success'>Akun telah berhasil dibuat</div>";
+  $query = mysqli_query($konek, "insert into netijen values (
+    NULL, '$nik', '$nama', '$username', 
+    md5('$password'), '$telp'
+  )");
+
+  if ($query) {
+    $pesan = "<div class='alert alert-success'>Akun berhasil dibuat.</div>";
   } else {
-    $pesan = "<div class='alert alert-danger'>Terjadi kesalahan</div>";
+    $pesan = "<div class='alert alert-success'>Terjadi kesalahan.</div>";
   }
 }
 ?>
-
 
 <div class="row">
       <div class="col-md-4 offset-md-4">
@@ -46,7 +45,7 @@ if (isset($_POST['kirim'])) {
                 <input type="number" name="telp" class="form-control" placeholder="No.telepon" required>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary" name="kirim">Kirim</button>
+                <button type="submit" name="kirim" class="btn btn-primary" >Kirim</button>
               </div>
               <a href="?menu=login" class="text-muted">Sudah punya akun? Login disini</a>
             </form>

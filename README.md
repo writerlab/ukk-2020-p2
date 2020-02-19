@@ -14,7 +14,7 @@
 3. [x] Routing URL + Konfigurasi DB [PHP] [Tonton vidio](https://youtu.be/FJhNg80NF_o)
 
 ### Fitur Inti
-4. [ ] Registrasi + Login + Logout [PHP]
+4. [x] Registrasi + Login + Logout [PHP]
 5. [ ] Menulis Laporan Pengaduan [PHP]
 6. [ ] Verifikasi & Validasi [PHP]
 7. [ ] Memberikan Tanggapan [PHP]

@@ -15,16 +15,15 @@
 
     if (!empty($_SESSION['id'])) {
       include("konten/nav.php");
-      include("atur-konten.php");
+      include("atur-konten.php");    
     } else {
       if ($_GET['menu'] == 'registrasi') {
-        include("konten/registrasi.php");
-      }
-      else {
-        include("konten/login.php");
+        include('konten/registrasi.php');
+      } else {
+        include('konten/login.php');
       }
     }
-    
+      
 
     ?>
   </div>
