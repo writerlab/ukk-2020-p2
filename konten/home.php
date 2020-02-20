@@ -1,1 +1,1 @@
-<h1>Hai, <?php print $_SESSION['nama']?></h1>
+<h1>Hai, <?php print $_SESSION['level']?></h1>

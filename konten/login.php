@@ -3,7 +3,7 @@ if (isset($_POST['kirim'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $query = mysqli_query($konek, "select * from netijen where 
+  $query = mysqli_query($konek, "select * from pengguna where 
   username='$username' and password=md5('$password') ");
 
   $jumlah = mysqli_num_rows($query);
@@ -11,9 +11,10 @@ if (isset($_POST['kirim'])) {
   if ($jumlah > 0) {
     $sesi = mysqli_fetch_assoc($query);
 
-    $_SESSION['id'] = $sesi['id_netijen'];
+    $_SESSION['id'] = $sesi['id_pengguna'];
     $_SESSION['nik'] = $sesi['nik'];
     $_SESSION['nama'] = $sesi['nama'];
+    $_SESSION['level'] = $sesi['level'];
 
     print "<meta http-equiv='refresh' content='0; url=?menu=home'>";
   } else {
@@ -32,12 +33,15 @@ if (isset($_POST['kirim'])) {
             <?php print $pesan?>
             <form action="" method="post">
               <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Username" required>
+                <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
               </div>
               <div class="form-group">
                 <input type="password" name="password" class="form-control" placeholder="Password" required>
               </div>
-              <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+              <div class="form-group">
+                <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+              </div>
+              <a href="?menu=registrasi" class="text-muted">Belum punya akun? Registrasi disini</a>
             </form>
           </div>
         </div>

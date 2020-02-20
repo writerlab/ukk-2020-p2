@@ -6,9 +6,9 @@ if (isset($_POST['kirim'])) {
   $password = $_POST['password'];
   $telp = $_POST['telp'];
 
-  $query = mysqli_query($konek, "insert into netijen values (
+  $query = mysqli_query($konek, "insert into pengguna values (
     NULL, '$nik', '$nama', '$username', 
-    md5('$password'), '$telp'
+    md5('$password'), '$telp', 'netijen'
   )");
 
   if ($query) {
