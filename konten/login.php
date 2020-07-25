@@ -24,26 +24,26 @@ if (isset($_POST['kirim'])) {
 ?>
 
 <div class="row">
-      <div class="col-md-4 offset-md-4">
-        <div class="card">
-          <div class="card-header">
-            LOGIN
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-header">
+        LOGIN
+      </div>
+      <div class="card-body">
+        <?php print $pesan?>
+        <form action="" method="post">
+          <div class="form-group">
+            <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
           </div>
-          <div class="card-body">
-            <?php print $pesan?>
-            <form action="" method="post">
-              <div class="form-group">
-                <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
-              </div>
-              <div class="form-group">
-                <input type="password" name="password" class="form-control" placeholder="Password" required>
-              </div>
-              <div class="form-group">
-                <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
-              </div>
-              <a href="?menu=registrasi" class="text-muted">Belum punya akun? Registrasi disini</a>
-            </form>
+          <div class="form-group">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
           </div>
-        </div>
+          <div class="form-group">
+            <button type="submit" name="kirim" class="btn btn-primary">Kirim</button>
+          </div>
+          <a href="?menu=registrasi" class="text-muted">Belum punya akun? Registrasi disini</a>
+        </form>
       </div>
     </div>
+  </div>
+</div>
