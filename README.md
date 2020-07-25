@@ -16,7 +16,7 @@
 ### Fitur Inti
 4. [x] Registrasi + Login + Logout [PHP] [Tonton vidio](https://youtu.be/pt0l6T5y22A)
     - [x] Mengurangi Jumlah Tabel [Tonton vidio](https://youtu.be/CKFczQhmQL4)
-5. [ ] Menulis Laporan Pengaduan [PHP]
+5. [x] Menulis Laporan Pengaduan [Tonton Vidio](https://youtu.be/b8vNM8OvfQk)
 6. [ ] Verifikasi & Validasi [PHP]
 7. [ ] Memberikan Tanggapan [PHP]
 8. [ ] Generate Laporan? (***pass***)
