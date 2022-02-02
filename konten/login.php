@@ -5,6 +5,9 @@ if (isset($_POST['kirim'])) {
 
   $query = mysqli_query($konek, "select * from pengguna where 
   username='$username' and password=md5('$password') ");
+  
+  // print "select * from pengguna where 
+  // username='$username' and password=md5('$password') ";
 
   $jumlah = mysqli_num_rows($query);
 
@@ -23,7 +26,7 @@ if (isset($_POST['kirim'])) {
 }
 ?>
 
-<div class="row">
+<div class="row" id="app">
   <div class="col-md-4 offset-md-4">
     <div class="card">
       <div class="card-header">
@@ -47,3 +50,15 @@ if (isset($_POST['kirim'])) {
     </div>
   </div>
 </div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data() {
+      return {
+        username: '',
+        password: '',
+      }
+    }
+  })
+</script>
