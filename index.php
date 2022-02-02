@@ -6,10 +6,11 @@
   include("koneksi.php");
   include("konten/head.html");
   ?>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" id="app">
     <?php
     include("konten/judul.html");
 
@@ -23,9 +24,9 @@
         include('konten/login.php');
       }
     }
-      
 
     ?>
+    
   </div>
 
   <script src="js/jquery.js"></script>

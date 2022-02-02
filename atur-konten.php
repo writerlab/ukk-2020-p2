@@ -19,3 +19,6 @@ elseif ($_GET['menu'] == 'verifikasi') {
 elseif ($_GET['menu'] == 'kirim-tanggapan') {
   include('konten/kirim-tanggapan.php');
 }
+elseif($_GET['menu'] == 'about') {
+  print "<H1> INI HALAMAN ABOUT!!! </H1>";
+}
