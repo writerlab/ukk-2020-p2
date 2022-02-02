@@ -5,9 +5,6 @@ if (isset($_POST['kirim'])) {
 
   $query = mysqli_query($konek, "select * from pengguna where 
   username='$username' and password=md5('$password') ");
-  
-  // print "select * from pengguna where 
-  // username='$username' and password=md5('$password') ";
 
   $jumlah = mysqli_num_rows($query);
 
